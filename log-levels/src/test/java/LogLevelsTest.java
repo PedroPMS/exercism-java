@@ -41,24 +41,24 @@ public class LogLevelsTest {
     @Test
     public void error_reformat() {
         assertThat(LogLevels.reformat("[ERROR]: Segmentation fault"))
-            .isEqualTo("Segmentation fault (error)");
+                .isEqualTo("Segmentation fault (error)");
     }
 
     @Test
     public void warning_reformat() {
         assertThat(LogLevels.reformat("[WARNING]: Decreased performance"))
-            .isEqualTo("Decreased performance (warning)");        
+                .isEqualTo("Decreased performance (warning)");
     }
 
     @Test
     public void info_reformat() {
         assertThat(LogLevels.reformat("[INFO]: Disk defragmented"))
-            .isEqualTo("Disk defragmented (info)");        
+                .isEqualTo("Disk defragmented (info)");
     }
 
     @Test
     public void reformat_with_leading_and_trailing_white_space() {
         assertThat(LogLevels.reformat("[ERROR]: \t Corrupt disk\t \t \r\n"))
-            .isEqualTo("Corrupt disk (error)");        
+                .isEqualTo("Corrupt disk (error)");
     }
 }
