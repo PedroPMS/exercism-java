@@ -29,7 +29,7 @@ public class Blackjack {
     }
 
     public boolean isBlackjack(String card1, String card2) {
-        return this.parseCard(card1) + this.parseCard(card2) == 21 ? true : false;
+        return this.parseCard(card1) + this.parseCard(card2) == 21;
     }
 
     public String largeHand(boolean isBlackjack, int dealerScore) {
