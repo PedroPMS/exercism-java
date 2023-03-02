@@ -13,15 +13,15 @@ public class LanguageList {
     }
 
     public void removeLanguage(String language) {
-        throw new UnsupportedOperationException("Please implement the removeLanguage() method");
+        this.languages.remove(language);
     }
 
     public String firstLanguage() {
-        throw new UnsupportedOperationException("Please implement the firstLanguage() method");
+        return this.languages.get(0);
     }
 
     public int count() {
-        throw new UnsupportedOperationException("Please implement the count() method");
+        return this.languages.size();
     }
 
     public boolean containsLanguage(String language) {
@@ -29,6 +29,6 @@ public class LanguageList {
     }
 
     public boolean isExciting() {
-        throw new UnsupportedOperationException("Please implement the isExciting() method");
+        return this.containsLanguage("Java") || this.containsLanguage("Kotlin");
     }
 }
